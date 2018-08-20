@@ -2,20 +2,19 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
-        <title>exercice 6</title>
+        <title>exercice 2</title>
     </head>
     <body>
-
         <p>
             <?php
-            //grâce a la condition on va pouvoir verifier si l'age est definie sinon on affiche le message d'erreur 
-            if (isset($_GET['age'])) {
-                echo $_GET['age'];
+            //Création d'une condition si le paramètre âge existe
+            if (!empty($_GET['lastname']) && !empty($_GET['firstname']) && !empty($_GET['age'])) {
+                echo $_GET['lastname'] . ' ' . $_GET['firstname'] . ' ' . $_GET['age'];
             } else {
-                echo 'enter age please';
+                //Autre condition si le paramètre age n'est pas présent
+                echo 'Il manque l\'âge';
             }
             ?>
-
         </p>
     </body
 </html>
